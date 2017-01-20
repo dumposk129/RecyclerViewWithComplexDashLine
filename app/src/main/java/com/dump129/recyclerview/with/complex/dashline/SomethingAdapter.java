@@ -30,8 +30,8 @@ public class SomethingAdapter extends RecyclerView.Adapter<SomethingViewHolder> 
         holder.tvTitle.setText(data.getTitle());
         holder.tvContent.setText(data.getContent());
         holder.tvReleaseDate.setText(data.getReleaseDate());
-        holder.dlvHeader.setVisibility(position == 0 ? View.INVISIBLE : View.VISIBLE);
-        holder.dlvFooter.setVisibility(position == getItemCount() - 1 ? View.INVISIBLE : View.VISIBLE);
+        holder.dlvHeader.setVisibility(position == 0 ? View.INVISIBLE : View.VISIBLE); // if the first recycler view does not show dot line, else show it
+        holder.dlvFooter.setVisibility(position == getItemCount() - 1 ? View.INVISIBLE : View.VISIBLE); // if the last recycler view does not show dot line, else show it
     }
 
     @Override
